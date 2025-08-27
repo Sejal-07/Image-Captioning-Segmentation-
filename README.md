@@ -16,27 +16,26 @@ Upload an image, and the app will generate a descriptive caption along with a se
 
 ## 📂 Project Structure
 ```bash
-image-captioning-segmentation/
+IMAGE-CAPTIONING-SEGMENTATION/
+├── data/
+│   └── coco/
+│       └── images/
+│           ├── sample_image1.png
+│           ├── sample_image2.jpeg
+│           └── sample_image3.jpeg
 │
-├── app.py                        # Main Streamlit app
+├── models/                     # Pretrained / trained models will be stored here
 │
-├── assets/                       # Static/sample images
-│   ├── generate_sample_images.py
-│   └── sample1.jpg
+├── utils/
+│   ├── __init__.py             # Marks utils as a package
+│   ├── captioning.py           # Image captioning module
+│   ├── segmentation.py         # Image segmentation module
+│   └── visualization.py        # Visualization utilities
 │
-├── models/                       # Pretrained/fine-tuned models
-│   ├── caption_model/            
-│   └── segmentation_model/       
-│
-├── utils/                        # Utility functions
-│   ├── __init__.py
-│   ├── visualization.py          # Visualization functions (mask overlay, etc.)
-│   ├── preprocessing.py          # Image preprocessing helpers
-│   └── captioning.py             # Image caption generation
-│
-├── requirements.txt              # Python dependencies
-├── README.md                     # Project documentation
-└── .gitignore                    # Ignore unnecessary files
+├── app.py                      # Main application entry point
+├── requirements.txt            # Python dependencies
+├── setup.py                    # Project setup script
+
 ```
 
 ---
